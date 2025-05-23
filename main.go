@@ -9,10 +9,6 @@ import (
 func main() {
 	router := gin.New()
 	config.Connect()
-	// router.GET("/", func(c *gin.Context) {
-	// 	c.String(200, "Hello World")
-	// })
-
 	routes.UserRoute(router)
 	router.Run(":8080")
 }
